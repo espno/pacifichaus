@@ -449,17 +449,19 @@ footer{background:var(--navy);padding:52px 56px 28px;border-top:1px solid rgba(2
     <div class="alac-row">
       <div class="alac fu">
         <div>
+          <span class="sn">05</span>
           <h4>Brand Audit</h4>
           <p>Full social account review — competitors, voice gaps, written recommendations + 1 walkthrough call. 5 business days.</p>
         </div>
-        <div class="alac-p">A00<span>Flat rate</span></div>
+        <div class="alac-p">A$500<span>Flat rate</span></div>
       </div>
       <div class="alac fu" data-d="1">
         <div>
+          <span class="sn">06</span>
           <h4>1:1 Strategy Consultation</h4>
           <p>60-minute focused session on your brand and challenges. Written summary + 3 priority recommendations after the call.</p>
         </div>
-        <div class="alac-p">A80<span>Per session</span></div>
+        <div class="alac-p">A$180<span>Per session</span></div>
       </div>
     </div>
 
@@ -573,12 +575,12 @@ footer{background:var(--navy);padding:52px 56px 28px;border-top:1px solid rgba(2
       <div class="cta-card fu" data-d="2">
         <h3>Book a 15-minute chat.</h3>
         <p>I don't take on every client — and that's intentional. This call is simply to see if you and I are the right fit. No pitch, no pressure. Just an honest conversation about your brand.</p>
-        <a class="btn btn-oll" href="YOUR_CALENDLY_LINK" target="_blank">Book Now — It's Free</a>
+        <a class="btn btn-oll" href="https://calendly.com/jeaespino/discovery" target="_blank">Book Now — It's Free</a>
       </div>
       <div class="scarcity fu" data-d="3"><span class="avail-dot"></span>Currently working with a limited number of clients.</div>
       <div class="cont-dets fu" data-d="3">
-        <div class="cd"><div class="cd-icon">✉</div><div><div class="cd-l">Email</div><div class="cd-v"><a href="mailto:helloespino@gmail.com">helloespino@gmail.com</a></div></div></div>
-        <div class="cd"><div class="cd-icon">📱</div><div><div class="cd-l">AU · WhatsApp</div><div class="cd-v"><a href="tel:+61451808642">+61 451 808 642</a></div></div></div>
+        <div class="cd"><div class="cd-icon">✉</div><div><div class="cd-l">Email</div><div class="cd-v"><a href="mailto:helloespno@gmail.com">helloespno@gmail.com</a></div></div></div>
+        <div class="cd"><div class="cd-icon">📱</div><div><div class="cd-l">AU · WhatsApp</div><div class="cd-v"><a href="https://wa.me/61451808642" target="_blank">+61 451 808 642</a></div></div></div>
         <div class="cd"><div class="cd-icon">📱</div><div><div class="cd-l">PH · Viber</div><div class="cd-v"><a href="tel:+639062291015">+63 906 229 1015</a></div></div></div>
       </div>
     </div>
@@ -624,7 +626,7 @@ footer{background:var(--navy);padding:52px 56px 28px;border-top:1px solid rgba(2
           <p class="fnote">I'll respond within 24 hours. Your details are never shared.</p>
         </form>
       </div>
-      <div class="fs-ok" id="fok"><h3>Message received.</h3><p>I'll be in touch within 24 hours.<br>Or email: <a href="mailto:helloespino@gmail.com" style="color:var(--terra)">helloespino@gmail.com</a></p></div>
+      <div class="fs-ok" id="fok"><h3>Message received.</h3><p>I'll be in touch within 24 hours.<br>Or email: <a href="mailto:helloespno@gmail.com" style="color:var(--terra)">helloespno@gmail.com</a></p></div>
     </div>
   </div>
 </section>
@@ -635,8 +637,8 @@ footer{background:var(--navy);padding:52px 56px 28px;border-top:1px solid rgba(2
       <div class="ft-logo">Pacific Haus</div>
       <div class="ft-name">Jea Espino · Marketing Consultant</div>
       <div class="ft-contacts" style="margin-top:14px">
-        <a href="mailto:helloespino@gmail.com">helloespino@gmail.com</a>
-        <a href="tel:+61451808642">+61 451 808 642 (AU · WhatsApp)</a>
+        <a href="mailto:helloespno@gmail.com">helloespno@gmail.com</a>
+        <a href="https://wa.me/61451808642" target="_blank">+61 451 808 642 (AU · WhatsApp)</a>
         <a href="tel:+639062291015">+63 906 229 1015 (PH · Viber)</a>
       </div>
     </div>
@@ -687,7 +689,7 @@ burgEl.addEventListener('click',()=>{
 function closeMob(){mobEl.classList.remove('open')}
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});},{threshold:0.09});
 document.querySelectorAll('.fu').forEach(el=>io.observe(el));
-const SHEET_URL='YOUR_APPS_SCRIPT_URL';
+const SHEET_URL='https://script.google.com/macros/s/AKfycbyf8yosM45aBwFZiju_PZ7XfX70niBghQOKizI0Y3MRmWBHwA8Mn6jtU0N6NDmfwGVn0Q/exec';
 if(SHEET_URL==='YOUR_APPS_SCRIPT_URL')document.getElementById('sn').classList.add('show');
 const form=document.getElementById('lf');
 const sbtn=document.getElementById('sb');
@@ -700,7 +702,7 @@ form.addEventListener('submit',async e=>{
   const d={timestamp:new Date().toISOString(),name:form.name.value.trim(),business:form.business.value.trim(),email:form.email.value.trim(),phone:form.phone.value.trim(),service:form.service.value,industry:form.industry.value,message:form.message.value.trim(),source:document.referrer||'direct'};
   if(SHEET_URL==='YOUR_APPS_SCRIPT_URL'){document.getElementById('fw').style.display='none';document.getElementById('fok').classList.add('show');return;}
   try{await fetch(SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});document.getElementById('fw').style.display='none';document.getElementById('fok').classList.add('show');}
-  catch{sbtn.disabled=false;sbtn.textContent='Send Enquiry →';alert('Something went wrong. Please email helloespino@gmail.com directly.');}
+  catch{sbtn.disabled=false;sbtn.textContent='Send Enquiry →';alert('Something went wrong. Please email helloespno@gmail.com directly.');}
 });
 </script>
 </body>
